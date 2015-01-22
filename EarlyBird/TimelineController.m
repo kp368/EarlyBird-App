@@ -6,9 +6,19 @@
 //  Copyright (c) 2015 Samuel Pattuzzi. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "TimelineController.h"
+#import "ImageCell.h"
+#import "CurrentBetTableViewCell.h"
+#import "FailedTableViewCell.h"
+#import "Timeline.h"
+#import "SuccessDay.h"
+#import "FailDay.h"
 
 @interface TimelineController ()
+
+@property (readonly, strong, nonatomic) Timeline *model;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -16,6 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self->_managedObjectContext = appDelegate.managedObjectContext;
+;
+    self->_model = [Timeline timelineWithManagedObjectContext:self->_managedObjectContext];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -31,27 +46,51 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    __block NSInteger result;
+    [self.model.managedObjectContext performBlockAndWait:^{
+        result = [self.model.days count] + 1;
+    }];
+    return result;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    NSString *identifier = @"ImageCell";
     
-    // Configure the cell...
+    NSInteger index = [indexPath indexAtPosition:1];
+    UITableViewCell *resultCell;
+    if (index == 0) {
+        // First row
+        identifier = @"CurrentBetCell";
+        CurrentBetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+        cell.currentBet.text = self.model.currentBetString;
+        resultCell = cell;
+        
+    } else {
+        NSObject *currentDay = self.model.days[index - 1];
+        
+        if ([currentDay isKindOfClass:[SuccessDay class]]) {
+            SuccessDay *successDay = (SuccessDay *)currentDay;
+            identifier = @"ImageCell";
+            ImageCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+            cell.image.image = successDay.photo;
+            resultCell = cell;
+
+        } else {
+            FailDay *successDay = (FailDay *)currentDay;
+            identifier = @"FailedCell";
+            FailedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+            cell.amountLost.text = successDay.amountLostString;
+            
+            resultCell = cell;
+
+        }
+    }
     
-    return cell;
+    return resultCell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

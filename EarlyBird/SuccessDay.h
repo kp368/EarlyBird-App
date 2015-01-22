@@ -6,13 +6,14 @@
 //  Copyright (c) 2015 Samuel Pattuzzi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "Day.h"
 
 
 @interface SuccessDay : Day
 
+@property (readonly, nonatomic, retain) UIImage *photo;
 @property (nonatomic, retain) NSData * photoData;
 
 @end

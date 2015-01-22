@@ -7,7 +7,19 @@
 //
 
 #import "TimelineModel.h"
+#import "SuccessDay.h"
+#import "FailDay.h"
 
 @implementation TimelineModel
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _currentBetString = @"£3.00";
+        _days = @[[[SuccessDay alloc] init], [[FailDay alloc] init]];
+    }
+    return self;
+}
 
 @end

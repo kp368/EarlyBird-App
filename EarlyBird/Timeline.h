@@ -13,12 +13,14 @@
 
 @interface Timeline : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * currentBet;
+@property (nonatomic, retain, readonly) NSString *currentBetString;
+@property (nonatomic, retain) NSNumber *currentBet;
 @property (nonatomic, retain) NSOrderedSet *days;
 @end
 
 @interface Timeline (CoreDataGeneratedAccessors)
 
++ (instancetype)timelineWithManagedObjectContext:(NSManagedObjectContext *)context;
 - (void)insertObject:(Day *)value inDaysAtIndex:(NSUInteger)idx;
 - (void)removeObjectFromDaysAtIndex:(NSUInteger)idx;
 - (void)insertDays:(NSArray *)value atIndexes:(NSIndexSet *)indexes;

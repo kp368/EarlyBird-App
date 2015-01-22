@@ -10,4 +10,6 @@
 
 @interface FailedTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *amountLost;
+
 @end

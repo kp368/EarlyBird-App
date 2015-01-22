@@ -13,6 +13,7 @@
 
 @interface FailDay : Day
 
-@property (nonatomic, retain) NSNumber * amountLost;
+@property (readonly, retain, nonatomic) NSString *amountLostString;
+@property (nonatomic, retain) NSNumber *amountLost;
 
 @end

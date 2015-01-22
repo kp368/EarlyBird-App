@@ -10,4 +10,8 @@
 
 @interface TimelineModel : NSObject
 
+@property (readonly, nonatomic, strong) NSString *currentBetString;
+
+@property (readonly, nonatomic, strong) NSArray *days;
+
 @end

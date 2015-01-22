@@ -10,4 +10,13 @@
 
 @implementation FailDayModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _amountLostString = @"-£2.00";
+    }
+    return self;
+}
+
 @end

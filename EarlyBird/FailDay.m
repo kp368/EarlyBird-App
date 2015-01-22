@@ -13,4 +13,13 @@
 
 @dynamic amountLost;
 
+- (NSString *)amountLostString
+{
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.locale = [NSLocale currentLocale];
+    formatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    
+    return [formatter stringFromNumber:self.amountLost];
+}
+
 @end

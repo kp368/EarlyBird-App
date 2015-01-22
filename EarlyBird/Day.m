@@ -14,4 +14,10 @@
 
 @dynamic timeline;
 
+- (instancetype)initAndInsertIntoManagedObjectContext:(NSManagedObjectContext *)context
+{
+    NSAssert(NO, @"Virtual class, shouldn't init.");
+    return nil;
+}
+
 @end

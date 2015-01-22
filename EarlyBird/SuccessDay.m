@@ -12,5 +12,6 @@
 @implementation SuccessDay
 
 @dynamic photoData;
+@synthesize photo;
 
 @end

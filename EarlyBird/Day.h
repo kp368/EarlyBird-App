@@ -15,4 +15,6 @@
 
 @property (nonatomic, retain) Timeline *timeline;
 
+- (instancetype)initAndInsertIntoManagedObjectContext:(NSManagedObjectContext *)context;
+
 @end

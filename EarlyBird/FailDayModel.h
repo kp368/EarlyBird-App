@@ -10,4 +10,6 @@
 
 @interface FailDayModel : NSObject
 
+@property (readonly, strong, nonatomic) NSString *amountLostString;
+
 @end

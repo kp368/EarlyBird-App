@@ -10,4 +10,13 @@
 
 @implementation SuccessDayModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _photo = [UIImage imageNamed:@"second"];
+    }
+    return self;
+}
+
 @end

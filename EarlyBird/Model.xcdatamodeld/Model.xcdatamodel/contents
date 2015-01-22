@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+    <entity name="Day" representedClassName="Day" isAbstract="YES" syncable="YES">
+        <relationship name="timeline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Timeline" inverseName="days" inverseEntity="Timeline" syncable="YES"/>
+    </entity>
+    <entity name="FailDay" representedClassName="FailDay" parentEntity="Day" syncable="YES">
+        <attribute name="amountLost" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="SuccessDay" representedClassName="SuccessDay" parentEntity="Day" syncable="YES">
+        <attribute name="photoData" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="Timeline" representedClassName="Timeline" syncable="YES">
+        <attribute name="currentBet" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="days" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Day" inverseName="timeline" inverseEntity="Day" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Timeline" positionX="-155" positionY="-283" width="128" height="28"/>
+        <element name="Day" positionX="-38" positionY="-160" width="128" height="28"/>
+        <element name="SuccessDay" positionX="-153" positionY="-27" width="128" height="58"/>
+        <element name="FailDay" positionX="70" positionY="-27" width="128" height="58"/>
+    </elements>
 </model>

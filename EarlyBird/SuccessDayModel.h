@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Samuel Pattuzzi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface SuccessDayModel : NSObject
+
+@property (readonly, nonatomic, strong) UIImage *photo;
 
 @end

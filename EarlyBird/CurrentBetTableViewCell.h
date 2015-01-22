@@ -10,4 +10,6 @@
 
 @interface CurrentBetTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *currentBet;
+
 @end
