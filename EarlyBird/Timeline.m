@@ -49,6 +49,8 @@
             FailDay *failDay;
             successDay = [[SuccessDay alloc] initAndInsertIntoManagedObjectContext:context];
             [timeline insertObject:successDay inDaysAtIndex:0];
+            successDay = [[SuccessDay alloc] initAndInsertIntoManagedObjectContext:context];
+            [timeline insertObject:successDay inDaysAtIndex:0];
             failDay = [[FailDay alloc] initAndInsertIntoManagedObjectContext:context];
             failDay.amountLost = [NSNumber numberWithDouble:2.30];
             [timeline insertObject:failDay inDaysAtIndex:0];
@@ -56,7 +58,7 @@
             [timeline insertObject:successDay inDaysAtIndex:0];
             
             NSError *error;
-            if ([context save:&error]) {
+            if (![context save:&error]) {
                 NSLog(@"Couldn't save the timeline. Error: %@", error);
                 timeline = nil;
             }
