@@ -15,6 +15,18 @@
 		224676B91A6E5E3900800989 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224676B81A6E5E3900800989 /* Images.xcassets */; };
 		224676BC1A6E5E3900800989 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224676BA1A6E5E3900800989 /* LaunchScreen.xib */; };
 		224676C81A6E5E3900800989 /* EarlyBirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224676C71A6E5E3900800989 /* EarlyBirdTests.m */; };
+		224676D31A6E625000800989 /* TimelineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224676D21A6E625000800989 /* TimelineController.m */; };
+		224676D61A6E9FC000800989 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 224676D51A6E9FC000800989 /* ImageCell.m */; };
+		224676DF1A6EAB9000800989 /* TimelineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 224676DE1A6EAB9000800989 /* TimelineModel.m */; };
+		224676E81A6EAD3300800989 /* SuccessDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 224676E71A6EAD3300800989 /* SuccessDayModel.m */; };
+		224676EB1A6EAD3F00800989 /* FailDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 224676EA1A6EAD3F00800989 /* FailDayModel.m */; };
+		224676F11A6EB0B400800989 /* CurrentBetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 224676F01A6EB0B400800989 /* CurrentBetTableViewCell.m */; };
+		224676F41A6EB0C300800989 /* FailedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 224676F31A6EB0C300800989 /* FailedTableViewCell.m */; };
+		224676F71A6FFDCD00800989 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 224676F51A6FFDCD00800989 /* Model.xcdatamodeld */; };
+		224677001A70070200800989 /* Timeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 224676FF1A70070200800989 /* Timeline.m */; };
+		224677031A70070300800989 /* FailDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 224677021A70070300800989 /* FailDay.m */; };
+		224677091A7007A300800989 /* SuccessDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 224677081A7007A300800989 /* SuccessDay.m */; };
+		2246770C1A70084300800989 /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 2246770B1A70084300800989 /* Day.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +55,29 @@
 		224676C11A6E5E3900800989 /* EarlyBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarlyBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		224676C61A6E5E3900800989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224676C71A6E5E3900800989 /* EarlyBirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EarlyBirdTests.m; sourceTree = "<group>"; };
+		224676D11A6E625000800989 /* TimelineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineController.h; sourceTree = "<group>"; };
+		224676D21A6E625000800989 /* TimelineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineController.m; sourceTree = "<group>"; };
+		224676D41A6E9FC000800989 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		224676D51A6E9FC000800989 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		224676DD1A6EAB9000800989 /* TimelineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineModel.h; sourceTree = "<group>"; };
+		224676DE1A6EAB9000800989 /* TimelineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineModel.m; sourceTree = "<group>"; };
+		224676E61A6EAD3300800989 /* SuccessDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessDayModel.h; sourceTree = "<group>"; };
+		224676E71A6EAD3300800989 /* SuccessDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessDayModel.m; sourceTree = "<group>"; };
+		224676E91A6EAD3F00800989 /* FailDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailDayModel.h; sourceTree = "<group>"; };
+		224676EA1A6EAD3F00800989 /* FailDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailDayModel.m; sourceTree = "<group>"; };
+		224676EF1A6EB0B400800989 /* CurrentBetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentBetTableViewCell.h; sourceTree = "<group>"; };
+		224676F01A6EB0B400800989 /* CurrentBetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentBetTableViewCell.m; sourceTree = "<group>"; };
+		224676F21A6EB0C300800989 /* FailedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedTableViewCell.h; sourceTree = "<group>"; };
+		224676F31A6EB0C300800989 /* FailedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedTableViewCell.m; sourceTree = "<group>"; };
+		224676F61A6FFDCD00800989 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		224676FE1A70070200800989 /* Timeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeline.h; sourceTree = "<group>"; };
+		224676FF1A70070200800989 /* Timeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timeline.m; sourceTree = "<group>"; };
+		224677011A70070300800989 /* FailDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailDay.h; sourceTree = "<group>"; };
+		224677021A70070300800989 /* FailDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailDay.m; sourceTree = "<group>"; };
+		224677071A7007A300800989 /* SuccessDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessDay.h; sourceTree = "<group>"; };
+		224677081A7007A300800989 /* SuccessDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessDay.m; sourceTree = "<group>"; };
+		2246770A1A70084300800989 /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
+		2246770B1A70084300800989 /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +119,11 @@
 		224676A71A6E5E3900800989 /* EarlyBird */ = {
 			isa = PBXGroup;
 			children = (
+				224676EE1A6EAE1E00800989 /* Views */,
+				224676ED1A6EAE1700800989 /* Controllers */,
+				224676EC1A6EAE0100800989 /* Models */,
 				224676AC1A6E5E3900800989 /* AppDelegate.h */,
 				224676AD1A6E5E3900800989 /* AppDelegate.m */,
-				224676AF1A6E5E3900800989 /* FirstViewController.h */,
-				224676B01A6E5E3900800989 /* FirstViewController.m */,
-				224676B21A6E5E3900800989 /* SecondViewController.h */,
-				224676B31A6E5E3900800989 /* SecondViewController.m */,
-				224676B51A6E5E3900800989 /* Main.storyboard */,
 				224676B81A6E5E3900800989 /* Images.xcassets */,
 				224676BA1A6E5E3900800989 /* LaunchScreen.xib */,
 				224676A81A6E5E3900800989 /* Supporting Files */,
@@ -122,6 +155,55 @@
 				224676C61A6E5E3900800989 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		224676EC1A6EAE0100800989 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				224676DD1A6EAB9000800989 /* TimelineModel.h */,
+				224676DE1A6EAB9000800989 /* TimelineModel.m */,
+				224676E61A6EAD3300800989 /* SuccessDayModel.h */,
+				224676E71A6EAD3300800989 /* SuccessDayModel.m */,
+				224676E91A6EAD3F00800989 /* FailDayModel.h */,
+				224676EA1A6EAD3F00800989 /* FailDayModel.m */,
+				224676F51A6FFDCD00800989 /* Model.xcdatamodeld */,
+				224677011A70070300800989 /* FailDay.h */,
+				224677021A70070300800989 /* FailDay.m */,
+				224676FE1A70070200800989 /* Timeline.h */,
+				224676FF1A70070200800989 /* Timeline.m */,
+				224677071A7007A300800989 /* SuccessDay.h */,
+				224677081A7007A300800989 /* SuccessDay.m */,
+				2246770A1A70084300800989 /* Day.h */,
+				2246770B1A70084300800989 /* Day.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		224676ED1A6EAE1700800989 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				224676AF1A6E5E3900800989 /* FirstViewController.h */,
+				224676B01A6E5E3900800989 /* FirstViewController.m */,
+				224676B21A6E5E3900800989 /* SecondViewController.h */,
+				224676B31A6E5E3900800989 /* SecondViewController.m */,
+				224676D11A6E625000800989 /* TimelineController.h */,
+				224676D21A6E625000800989 /* TimelineController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		224676EE1A6EAE1E00800989 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				224676B51A6E5E3900800989 /* Main.storyboard */,
+				224676D41A6E9FC000800989 /* ImageCell.h */,
+				224676D51A6E9FC000800989 /* ImageCell.m */,
+				224676EF1A6EB0B400800989 /* CurrentBetTableViewCell.h */,
+				224676F01A6EB0B400800989 /* CurrentBetTableViewCell.m */,
+				224676F21A6EB0C300800989 /* FailedTableViewCell.h */,
+				224676F31A6EB0C300800989 /* FailedTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,9 +307,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				224676B41A6E5E3900800989 /* SecondViewController.m in Sources */,
+				224676D61A6E9FC000800989 /* ImageCell.m in Sources */,
 				224676AE1A6E5E3900800989 /* AppDelegate.m in Sources */,
 				224676B11A6E5E3900800989 /* FirstViewController.m in Sources */,
+				224676E81A6EAD3300800989 /* SuccessDayModel.m in Sources */,
+				224676EB1A6EAD3F00800989 /* FailDayModel.m in Sources */,
+				224676DF1A6EAB9000800989 /* TimelineModel.m in Sources */,
+				224676F41A6EB0C300800989 /* FailedTableViewCell.m in Sources */,
+				224676D31A6E625000800989 /* TimelineController.m in Sources */,
 				224676AB1A6E5E3900800989 /* main.m in Sources */,
+				224677001A70070200800989 /* Timeline.m in Sources */,
+				224676F11A6EB0B400800989 /* CurrentBetTableViewCell.m in Sources */,
+				224677031A70070300800989 /* FailDay.m in Sources */,
+				224677091A7007A300800989 /* SuccessDay.m in Sources */,
+				2246770C1A70084300800989 /* Day.m in Sources */,
+				224676F71A6FFDCD00800989 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +524,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		224676F51A6FFDCD00800989 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				224676F61A6FFDCD00800989 /* Model.xcdatamodel */,
+			);
+			currentVersion = 224676F61A6FFDCD00800989 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2246769D1A6E5E3900800989 /* Project object */;
 }
