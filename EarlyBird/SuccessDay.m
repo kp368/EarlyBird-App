@@ -14,4 +14,11 @@
 @dynamic photoData;
 @synthesize photo;
 
+- (instancetype)initAndInsertIntoManagedObjectContext:(NSManagedObjectContext *)context
+{
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"SuccessDay" inManagedObjectContext:context];
+    
+    return [self initWithEntity:description insertIntoManagedObjectContext:context];
+}
+
 @end

@@ -22,4 +22,11 @@
     return [formatter stringFromNumber:self.amountLost];
 }
 
+- (instancetype)initAndInsertIntoManagedObjectContext:(NSManagedObjectContext *)context
+{
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"FailDay" inManagedObjectContext:context];
+    
+    return [self initWithEntity:description insertIntoManagedObjectContext:context];
+}
+
 @end

@@ -68,13 +68,14 @@
         resultCell = cell;
         
     } else {
-        NSObject *currentDay = self.model.days[index - 1];
+        // Day's are stored in chronological order but displayed in reverse.
+        NSInteger currentDayIndex = [self.model.days count] - index;
+        NSObject *currentDay = self.model.days[currentDayIndex];
         
         if ([currentDay isKindOfClass:[SuccessDay class]]) {
-            SuccessDay *successDay = (SuccessDay *)currentDay;
             identifier = @"ImageCell";
             ImageCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-            cell.image.image = successDay.photo;
+            cell.currentDay.text = [NSString stringWithFormat:@"%ld", (long)currentDayIndex + 1];
             resultCell = cell;
 
         } else {

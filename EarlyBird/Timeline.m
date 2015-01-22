@@ -7,6 +7,8 @@
 //
 
 #import "Timeline.h"
+#import "SuccessDay.h"
+#import "FailDay.h"
 #import "Day.h"
 
 
@@ -37,12 +39,38 @@
         NSLog(@"Too many timelines in store");
     }
     if ([results count] == 1) {
-        return results[1];
+        return results[0];
     } else {
-        NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Timeline" inManagedObjectContext:context];
-        return [[self alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:context];
+        __block Timeline *timeline;
+        [context performBlockAndWait:^{
+            NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Timeline" inManagedObjectContext:context];
+            timeline = [[self alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:context];
+            SuccessDay *successDay;
+            FailDay *failDay;
+            successDay = [[SuccessDay alloc] initAndInsertIntoManagedObjectContext:context];
+            [timeline insertObject:successDay inDaysAtIndex:0];
+            failDay = [[FailDay alloc] initAndInsertIntoManagedObjectContext:context];
+            failDay.amountLost = [NSNumber numberWithDouble:2.30];
+            [timeline insertObject:failDay inDaysAtIndex:0];
+            successDay = [[SuccessDay alloc] initAndInsertIntoManagedObjectContext:context];
+            [timeline insertObject:successDay inDaysAtIndex:0];
+            
+            NSError *error;
+            if ([context save:&error]) {
+                NSLog(@"Couldn't save the timeline. Error: %@", error);
+                timeline = nil;
+            }
+        }];
+        return timeline;
     }
 
+}
+
+- (void)insertObject:(Day *)value inDaysAtIndex:(NSUInteger)idx
+{
+    NSMutableOrderedSet *set = [self.days mutableCopy];
+    [set insertObject:value atIndex:idx];
+    self.days = set;
 }
 
 @end
